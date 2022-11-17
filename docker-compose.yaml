@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  nginx-proxy:
+    image: mongo-express
+    ports:
+      - "8081:8081"
+    networks:
+      - home
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+    environment:
+      - VIRTUAL_HOST=mongo.local,mongo.home.dryg.net
+      - ME_CONFIG_MONGODB_SERVER=mongodb
+
+networks:
+  home:
+    external: true
