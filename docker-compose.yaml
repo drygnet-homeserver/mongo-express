@@ -10,7 +10,7 @@ services:
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
     environment:
-      - VIRTUAL_HOST=mongo.local, mongo.dryg.io, db.dryg.io
+      - VIRTUAL_HOST=mongo.local, mongo2.dryg.io, db.dryg.io
       - ME_CONFIG_MONGODB_SERVER=mongodb
 
 networks:
