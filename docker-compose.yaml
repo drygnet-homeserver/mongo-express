@@ -6,13 +6,12 @@ services:
     expose:
       - "8081"
     networks:
-      - home
+      - www_home
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
     environment:
-      - VIRTUAL_HOST=mongo.local,mongo.home.dryg.net
+      - VIRTUAL_HOST=mongo.local, mongo.dryg.io
       - ME_CONFIG_MONGODB_SERVER=mongodb
 
 networks:
-  home:
-    external: true
+  www_home:
