@@ -1,2 +1,2 @@
 # mongo-express
-web GUI for mongodb :-)
+web GUI for mongodb
